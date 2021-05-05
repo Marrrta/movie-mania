@@ -21,8 +21,8 @@ Section #3 of the same notebook contains two attempts at training a multi-label 
 
 ![](./moc_results_t.png)
 
-The average accuracy score for the classifier trained on titles was 0.04(?)*, with genres more represented in the training set achieving much better results: Drama, Documentary, and Comedy.
-Understandably, the average accuracy score for the classifier trained on summaries was significantly better: 0.18(?)*. Similarly to what's been observed above, genres with more than 30,000 observations in the data set were recognized more accurately:
+The average accuracy score for the classifier trained on titles was 0.04(?)[^1], with genres more represented in the training set achieving much better results: Drama, Documentary, and Comedy.<br>
+Understandably, the average accuracy score for the classifier trained on summaries was significantly better: 0.18(?)[^1]. Similarly to what's been observed above, genres with more than 30,000 observations in the data set were recognized more accurately:
 
 ![](./moc_results_s.png)
 
@@ -37,4 +37,4 @@ Future exploration might include:
 - Using a combination of summary and title in predicting the genre,
 - Training a binary classifier to only classify one genre at a time.
 
-_* Apparent mismatch between the score returned by the moc estimators and the accuracy scores calculated for each genre (see table above) is under investigation.
+[^1]: Apparent mismatch between the score returned by the moc estimators and the accuracy scores calculated for each genre (see table above) is under investigation.
