@@ -19,10 +19,12 @@ While none of the trained clustering models achieved silhouette scores indicatin
 
 Section #3 of the same notebook contains two attempts at training a multi-label classifier, first leveraging text-based features extracted from movie titles, then utilizing features extracted from plot summaries, where labels are ten popular genres represented by movies in the dataset. Each movie in the dataset on which the models were trained represents one, two, or three genres.
 
-The average accuracy score for the classifier trained on titles was ..., with genres more represented in the training set achieving much better results: ... for Drama, ... for Comedy, and ... for ...
-Surprisingly, the average accuracy score for the classifier trained on summaries was nearly the same: .... Similarly to what's been observed above, genres with more than 30,000 observations in the data set were recognized more accurately:
+![](./moc_results_t.png)
 
-![](./moc_results.png)
+The average accuracy score for the classifier trained on titles was 0.04(?)*, with genres more represented in the training set achieving much better results: Drama, Documentary, and Comedy.
+Understandably, the average accuracy score for the classifier trained on summaries was significantly better: 0.18(?)*. Similarly to what's been observed above, genres with more than 30,000 observations in the data set were recognized more accurately:
+
+![](./moc_results_s.png)
 
 ----------------
 ### Possible Project Extensions
@@ -34,3 +36,5 @@ Future exploration might include:
 - Training a multi-output classifier with estimator objects other than KNC (e.g. Decision Tree),
 - Using a combination of summary and title in predicting the genre,
 - Training a binary classifier to only classify one genre at a time.
+
+_* Apparent mismatch between the score returned by the moc estimators and the accuracy scores calculated for each genre (see table above) is under investigation.
