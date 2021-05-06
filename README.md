@@ -26,6 +26,10 @@ Understandably, the average accuracy score for the classifier trained on summari
 
 ![](./moc_results_s.png)
 
+The apparent mismatch between the score returned by the moc estimators and the accuracy scores calculated for each genre (see table above) can be explained by how the multi-output estimator scores predictions: for each test observation, the prediction is only considered accurate if all assigned labels correspond to those in the original dataset - see below:
+
+![](./accuracy_check.png)
+
 ----------------
 ### Possible Project Extensions
 
@@ -36,5 +40,3 @@ Future exploration might include:
 - Training a multi-output classifier with estimator objects other than KNC (e.g. Decision Tree),
 - Using a combination of summary and title in predicting the genre,
 - Training a binary classifier to only classify one genre at a time.
-
-[^1]: Apparent mismatch between the score returned by the moc estimators and the accuracy scores calculated for each genre (see table above) can be explained by how the multi-output estimator scores predictions: for each test observation, the prediction is only considered accurate if all assigned labels correspond to those in the original dataset. 
