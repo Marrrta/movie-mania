@@ -30,6 +30,8 @@ The apparent mismatch between the score returned by the moc estimators and the a
 
 ![](./accuracy_check.png)
 
+Interestingly, while the classifier trained on titles correctly assigned all genres to only 4% of the test movies, it's accuracy shoots up to 54% and when the problem is defined as "9 or more correct genre labels" and 87% "8 or more correct labels". The corresponding results for the classifier trained on summaries are 18%, 48% and 83%.
+
 ----------------
 ### Possible Project Extensions
 
